@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/icon/site.webmanifest">
+    <link rel="stylesheet" href="/style.css">
+    <title>Bookshelf App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Bookshelf App</h2>
+        </div>
+        <div id="toast">
+            Buku berhasil di simpan!
+        </div>
+        <div class="form-container">
+            <form id="form">
+                <label for="bookTitle">Judul Buku</label></br>
+                <input type="text" id="bookTitle" autocomplete="off"></br>
+                <label for="bookAuthor">Pengarang</label></br>
+                <input type="text" id="bookAuthor" autocomplete="off"></br>
+                <label for="year">Tahun Terbit</label></br>
+                <input id="publishedYear" type="number" min="1900" max="2099" step="1" value="2022" /></br>
+                <input type="checkbox" name="isCompleted" id="isCompleted">
+                <label for="isCompleted">Sudah dibaca</label></br>
+                <button type="button" onclick="addBook()">Submit</button>
+            </form>
+        </div>
+        <div class="books">
+            <h3>Belum selesai dibaca</h3>
+            <div id="book-list">
+            </div>
+        </div>
+        <div class="finished-list">
+            <h3>Selesai dibaca</h3>
+            <div id="finished-list">
+            </div>
+        </div>
+    </div> 
+</body>
+<script src="/script.js"></script>
+</html>
